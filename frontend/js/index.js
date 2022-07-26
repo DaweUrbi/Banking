@@ -14,7 +14,7 @@ $(() => {
 		
 				$.ajax({
 					method:'get',
-					url:'http://localhost:3000/accounts',
+					url:`${domainUrl}/accounts`,
 					contentType:'application/json'
 				}).done((data) => {
 					let accountOptions = $.map(data, (item) => {
@@ -46,7 +46,7 @@ $(() => {
 									transactions: [],
 								},
 							}),
-							url: 'http://localhost:3000/accounts',
+							url:`${domainUrl}/accounts`,
 							contentType: 'application/json',
 							dataType: 'json',
 						}).done((data) => {
@@ -93,7 +93,7 @@ $(() => {
 				const transactionTable = $("#transactionsTable");
 				$.ajax({
 		  			method:'get',
-		  			url:'http://localhost:3000/transactions',
+		  			url:`${domainUrl}/transactions`,
 		  			contentType:'application/json'
 				}).done((data) => { 
 		  			for ( const listTrans of data) {
@@ -131,7 +131,7 @@ $(() => {
 					let toAccount = $('input[name="transaction"]:checked').val() == 'transfer' ? $('#toSelect').val() : 0;
 		  
 					$.ajax({
-						url: "http://localhost:3000/transaction", 
+						url:`${domainUrl}/transaction`,
 						type: "post",
 						contentType: "application/json",
 						dataType: "json",
@@ -235,7 +235,7 @@ $(() => {
 			//Creating new categories in list
 				$(document).ready(() => {
 					$.ajax({
-						url: "http://localhost:3000/categories",
+						url:`${domainUrl}/categories`,
 						type: "get",
 						contentType: "application/json",
 						dataType: "json",
@@ -261,7 +261,7 @@ $(() => {
 					}
 					// Storing category in server
 					$.ajax({
-						url: "http://localhost:3000/categories",
+						url:`${domainUrl}/categories`,
 						type: "post",
 						contentType: "application/json",
 						dataType: "json",
