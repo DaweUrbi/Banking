@@ -1,4 +1,4 @@
-import domainUrl from './helpers/Common';
+const domainUrl = 'https://banking-app-ciccc.herokuapp.com';
 
 $(() => {
 
