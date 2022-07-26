@@ -1,3 +1,5 @@
+import domainUrl from './helpers/Common';
+
 $(() => {
 
 	$(document).ready(() => {
